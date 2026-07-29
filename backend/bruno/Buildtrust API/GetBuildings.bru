@@ -1,0 +1,27 @@
+meta {
+  name: GetBuildings
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/buildings?city=Mumbai&area=Andheri&sort=-price
+  body: none
+  auth: inherit
+}
+
+params:query {
+  city: Mumbai
+  area: Andheri
+  sort: -price
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQ2NDhhYmJiMTFkNWIyMDUzMDQzMmYiLCJyb2xlIjoiYnVpbGRlciIsImlhdCI6MTc4MzUzNTEyNCwiZXhwIjoxNzg0MTM5OTI0fQ.AgbXlVGqnzzpLaCgk0R25TUEOigUjZQB9J9uMadOi_A
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+​

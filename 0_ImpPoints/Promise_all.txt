@@ -1,0 +1,15 @@
+useEffect(() => {
+    const fetchInitialData = async () => {
+      try{
+        const [buildingsResponse,likedBuildingsResponse] = await Promise.all([
+          api.get("/buildings"),
+          api.get("/users/profile/me")
+        ]) //promise.all takes one array of apis and execute them parallely so that time is saved
+        setBuildings(buildingsResponse.data);
+        setLikedBuildingsIds(likedBuildingsResponse.data.likedBuildingsIds)
+      }catch(error){
+        console.log(error);
+      }
+    }
+    fetchInitialData();
+  }, [])  

@@ -1,0 +1,20 @@
+meta {
+  name: get my profile
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/users/me
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQzYmZlMTVhMDViODA3MDI1MTBjZmUiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODMwMjEyODMsImV4cCI6MTc4MzYyNjA4M30.ozCqrKy3gBIF-GOzuRweLkRzQ6Y21KmoVE9_Iu4pD6g
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

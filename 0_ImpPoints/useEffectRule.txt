@@ -1,0 +1,2 @@
+React's core rule for useEffect is: Any variable or function declared outside useEffect that is used inside 
+useEffect must be listed in the dependency array.

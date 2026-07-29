@@ -1,0 +1,2 @@
+we use nodemailer library for sending emails for eg:during registration 
+for verification of email

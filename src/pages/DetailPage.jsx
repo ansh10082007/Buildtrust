@@ -1,22 +1,28 @@
-import React from 'react'
-import { buildings } from '../Buildings/Mumbai_Bldgs/Suburban_bldgs'
+import { useEffect, useState } from 'react'
 import ViewFull_card from '../components/ViewFull_card'
 import { useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import api from '../api/api'
 
 const DetailPage = () => {
   const { BuildingId } = useParams();
 
-  const building = buildings.find(
-    (b) => (b.id == Number(BuildingId))
-  )
+  const [building,setBuilding] = useState({})
+
+  useEffect(()=>{
+    const fetchBuilding = async ()=>{
+      const response = await api.get(`/buildings/${BuildingId}`)
+      setBuilding(response.data)
+    }
+    fetchBuilding()
+  },[BuildingId])
 
   return (
     <div className='flex flex-col '>
       <Navbar />
       <div className="h-1 bg-linear-to-b from-white/10 to-blue-950" />
       <ViewFull_card img={building.img} img1={building.img1} img2={building.img2} img3={building.img3} alt={building.alt} name={building.name}
-        total_price={building.total_price} bhk={building.bhk} price_sqft={building.price_sqft} Carpet_area={building.Carpet_area} location={building.location}
+        price={building.price} bhk={building.bhk} Carpet_area={building.Carpet_area} city={building.city} area={building.area}
       />
     </div>
   )

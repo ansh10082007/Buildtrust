@@ -1,0 +1,27 @@
+meta {
+  name: update building
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:3000/buildings/6a47e249963cf044a522151e
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQzYmZlMTVhMDViODA3MDI1MTBjZmUiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODM4NjMxMDksImV4cCI6MTc4NDQ2NzkwOX0.KLY09KNizVIR_MZnvrfo1j0YQraulsH2EBouA8Wwe48
+}
+
+body:json {
+  {
+    "name":"Harmony Apartments",
+    "price":10000000
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

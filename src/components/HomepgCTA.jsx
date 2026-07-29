@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import { useSearchParams } from 'react-router-dom';
 
 const HomepgCTA = () => {
-    const [selectedCity, setSelectedCity] = useState(null);
+    
     const cities = [
         { value: "mumbai", label: "Mumbai" },
         { value: "pune", label: "Pune" },
@@ -43,10 +44,13 @@ const HomepgCTA = () => {
         ]
     };
 
-    const areaOptions = selectedCity ? areas[selectedCity.value] : [];
-    const [selectedArea, setSelectedArea] = useState(null);
 
+    const [selectedCity, setSelectedCity] = useState(null);
+    const [selectedArea, setSelectedArea] = useState(null);
     const [budget, setBudget] = useState(1000000);
+    
+    const areaOptions = selectedCity ? areas[selectedCity.value] : [];
+
     return (
         <div className='flex flex-col gap-5 p-3 '>
             <h1>What you are looking for?</h1>
@@ -73,6 +77,7 @@ const HomepgCTA = () => {
                     <span>₹5Cr</span>
                 </div>
             </div>
+            <span><button className='text-black bg-blue-300'>Search</button></span>
         </div>
     )
 }
