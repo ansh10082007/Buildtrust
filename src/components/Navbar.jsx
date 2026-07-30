@@ -1,13 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { React,useState } from 'react'
-import { useContext } from 'react'
+import { useContext,useState } from 'react'
 import { AuthContext } from '../context/AuthContext'
 // import { ChevronUp, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
 
   const {isLoggedIn,setIsLoggedIn} = useContext(AuthContext);
-  const {showModal,setShowModal} = useState(false);
+  const [showModal,setShowModal] = useState(false);
 
   const navigate = useNavigate();
 
