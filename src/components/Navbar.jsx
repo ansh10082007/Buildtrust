@@ -36,7 +36,7 @@ const Navbar = () => {
       </div>
       <hr></hr>
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div className="fixed top-0 left-0 w-screen h-screen z-50  flex items-center justify-center bg-black/50 backdrop-blur-sm">
           <div className="w-full max-w-sm rounded-xl bg-white p-6 shadow-xl border border-gray-100">
             <h3 className="text-lg font-semibold text-gray-900">Confirm Logout</h3>
             <p className="mt-2 text-sm text-gray-500">Are you sure you want to log out of your account?</p>
