@@ -69,7 +69,7 @@ const loginUser = async(req,res)=>{
 }
 
 const getlikedBuildingsArray = async(req,res)=>{
-    const user = await User.findById(req.user.userId).populate("likedBuildings","_id name city area price")
+    const user = await User.findById(req.user.userId).populate("likedBuildings","_id name image city area price")
     if(!user){
         return res.status(400).json({
             message:"User not found"
