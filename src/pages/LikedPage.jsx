@@ -45,7 +45,7 @@ const About = () => {
               likedBuildings.map((bldg) => (
                 <Card
                   key={bldg._id}
-                  // bldg_img={bldg.img} alt={bldg.alt}
+                  bldg_img={bldg.image} 
                   bldg_name={bldg.name}
                   price={bldg.price}
                   city={bldg.city} area={bldg.area}
