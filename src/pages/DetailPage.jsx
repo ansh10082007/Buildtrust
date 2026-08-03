@@ -21,8 +21,8 @@ const DetailPage = () => {
     <div className='flex flex-col '>
       <Navbar />
       <div className="h-1 bg-linear-to-b from-white/10 to-blue-950" />
-      <ViewFull_card img={building.img} img1={building.img1} img2={building.img2} img3={building.img3} alt={building.alt} name={building.name}
-        price={building.price} bhk={building.bhk} Carpet_area={building.Carpet_area} city={building.city} area={building.area}
+      <ViewFull_card image={building.image} img1={building.img1} img2={building.img2} img3={building.img3} alt={building.alt} name={building.name}
+        price={building.price} price_sqft={building.price_sqft} bhk={building.bhk} carpet_area={building.carpet_area} city={building.city} area={building.area}
       />
     </div>
   )

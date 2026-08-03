@@ -6,6 +6,9 @@ const buildingSchema = new mongoose.Schema({
     city:String,
     area:String,
     price:Number,
+    price_sqft:Number,
+    bhk:Number,
+    carpet_area:Number,
     owner:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"User"
