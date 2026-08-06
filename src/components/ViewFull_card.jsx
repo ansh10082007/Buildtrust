@@ -9,6 +9,11 @@ const formatIndianNumber = (num) => {
 };
 
 const ViewFull_card = (props) => {
+
+  const img1 = props.img1 || props.image;
+  const img2 = props.img2 || props.image;
+  const img3 = props.img3 || props.image;
+
   return (
     <div>
       <div className='flex items-baseline gap-52 h-30 w-full p-5 bg-blue-950'>
@@ -31,7 +36,7 @@ const ViewFull_card = (props) => {
 
       <div className='flex min-h-screen bg-blue-50'>
         <div className='p-2'>
-          <ImagesCarousel image={props.image} img1={props.img1} img2={props.img2} img3={props.img3} />
+          <ImagesCarousel image={props.image} img1={img1} img2={img2} img3={img3} />
         </div>
         
         <div className='flex flex-col gap-10 ml-10 mt-10 bg-white/30 backdrop-blur-md shadow-md hover:shadow-lg rounded-3xl h-100 w-180 p-5 border-t-4 border-gray-700 mr-2 '>
