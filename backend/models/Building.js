@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 const buildingSchema = new mongoose.Schema({
     name:String,
     image:String,
+    img1:String,
+    img2:String,
+    img3:String,
     city:String,
     area:String,
     price:Number,
