@@ -9,7 +9,7 @@ const imagesCarousel = (props) => {
     const imgArray = [
         {
             id: 0,
-            src: props.img
+            src: props.image
         },
         {
             id: 1,
